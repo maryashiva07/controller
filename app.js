@@ -1,13 +1,18 @@
-// Build Your Own Library System with Express.js!
+// An Ecommerce Startup!
 
 const express = require("express");
 const app = express();
 
-const router = require("./routes");
+const router1 = require("./routes/userRoutes");
+const router2 = require("./routes/productRoutes");
+const router3 = require("./routes/cartRoutes");
 
-app.use(router);
 
-const port = 7777;
+app.use(router1);
+app.use(router2);
+app.use(router3);
+
+const port = 8000;
 
 app.listen(port, (req, res)=>{
      console.log("app is running on port : ", port);
